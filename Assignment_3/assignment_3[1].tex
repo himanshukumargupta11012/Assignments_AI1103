@@ -1,0 +1,98 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage[utf8]{inputenc}
+ 
+\usepackage{tfrupee}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+
+\title{Assignment 3}
+\author{\textbf{Himanshu Kumar Gupta (AI21BTECH11012)}}
+\maketitle
+\date {May 2022}
+
+\textbf{\textit{Ques. 7 , Ex. 16.2 , class 11 , CBSE}}
+
+Two dice are thrown. The events A, B and C are as follows:
+
+\begin{itemize}
+\item A: getting an even number on the first die.
+\item B: getting an odd number on the first die.
+\item C: getting the sum of the numbers on the dice $\leq5$.
+\end{itemize}
+ State true or false for following: (give reason for your answer)
+ 
+ \begin{enumerate}
+\item A and B are mutually exclusive
+ 
+\item A and B are mutually exclusive and exhaustive
+
+\item A = B'
+
+\item A and C are mutually exclusive
+
+\item A and B' are mutually exclusive
+
+\item A', B', C are mutually exclusive and exhaustive
+\end{enumerate}
+
+\textbf{\textit{Solution:}}
+ \begin{enumerate}
+\item \textbf{True}
+
+We know that any number can't be both odd and even.
+
+So,there won't be any common elements in A and B.
+
+So,A and B are mutually exclusive.
+
+\item \textbf{True}
+
+Any number on dice either be odd or even,there is not any possibility other than odd and even.
+
+So,A and B are mutually exhaustive and from $1^{st}$ part we know that A and B are mutually exclusive.
+
+So,A and B are mutually exclusive and exhaustive.
+
+\item \textbf{True}
+
+We also know that if 2 sets are mutually exclusive and exhaustive,then the two are complimentary of each other.
+
+And from $2^{nd}$ part we know that A and B are mutually exclusive and exhaustive.
+
+So, A and B are compliment of each other i.e. A=B'
+
+\item \textbf{False}
+
+In C the condition is sum of both dice to be less than equal to 5.
+
+So, first dice can have all natural number less than 4 which means have both even and odd numbers.
+
+So, A and C have common even numbers.
+
+That's why A and C can't be mutually exclusive.
+
+\item \textbf{False}
+
+from $3^{rd}$ part, A=B' 
+
+So, A and B' can't be mutually exclusive because they are same
+
+\item \textbf{False}
+
+from $4^{th}$ we know that A and C are not mutually exclusive 
+
+and from $3^{rd}$ we know that A=B'
+
+So, B' and C are not mutually exclusive
+
+So,A',B',C are not mutually exclusive because B' and C are not mutually exclusive
+
+\end{enumerate}
+\end{document}
