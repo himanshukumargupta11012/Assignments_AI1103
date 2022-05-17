@@ -1,0 +1,157 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+ 
+\usepackage{tfrupee}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+
+
+
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+
+\title{Assignment 4}
+\author{Himanshu Kumar Gupta (AI21BTECH11012)}
+\date {May 2022}
+\begin{document}
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\begin{frame}{Contents}
+    \tableofcontents
+\end{frame}
+
+\section{Question}
+\begin{frame}{Question : Example 24 , class $12^{th}$ , CBSE}
+
+\textbf{Two cards are drawn successively with replacement from a well-shuffled
+deck of 52 cards. Find the probability distribution of the number of aces.}
+\end{frame}
+
+\section{Solution}
+\begin{frame}{Solution}
+
+
+No. of aces is random variable.
+
+So,let the random variable $X\in{\cbrak{0,1,2}}$ denote
+the number of aces in the card drawing experiment.
+
+We know that,
+\begin{align}
+\label{eq:1}
+\Pr\brak{X = i} = \frac{n\brak{X = i}}{\sum_{i=0}^2 n\brak{X = i}}
+\end{align}
+where $i\in\cbrak{{0,1,2}}$ and $n\brak{X = i}$ is the frequency of getting i aces
+\end{frame}
+\begin{frame}
+Now, there are 52 cards and it's drawn 2 times. So,total cases would be $52\times52$.
+
+So,
+\begin{align}
+\label{eq:2}
+\sum_{i=0}^2 n\brak{X = i}&=52\times52 \nonumber \\
+&=2704
+\end{align}
+\end{frame}
+
+\begin{frame}
+For X=2,
+
+There are total 4 aces in deck of 52 cards and it's drawn 2 times and we need both as ace. So,total cases would be $4\times4$.
+
+So,
+\begin{align}
+\label{eq:3}
+n\brak{X = 2}&=4\times4     \nonumber  \\
+&=16
+\end{align}
+\end{frame}
+\begin{frame}
+For X=1,
+
+There are 4 aces and 48 non-ace cards in deck of 52 cards and it's drawn 2 times and we need exactly 1 ace. So there are 2 possibility,first is that first card is ace and second one is not and the other case is first card is non-ace but other one is ace. So,total cases for this condition would be $4\times48+48\times4$.
+
+So,
+\begin{align}
+\label{eq:4}
+n\brak{X = 1}&=4\times48+48\times4        \nonumber \\
+&=384
+\end{align}
+\end{frame}
+\begin{frame}
+For X=0,
+
+There are 48 non-ace cards in deck of 52 cards and it's drawn 2 times.So,for being both non-ace card the number of cases would be $48\times48$. 
+
+So,
+\begin{align}
+\label{eq:5}
+n\brak{X = 0}&=48\times48              \nonumber\\
+&=2304
+\end{align}
+\end{frame}
+\begin{frame}
+Now,
+
+From equation \eqref{eq:1}, probability of getting 2 aces,
+\begin{align}
+\Pr\brak{X = 2} = \frac{n\brak{X = 2}}{\sum_{i=0}^2 n\brak{X = i}}
+\end{align}
+putting values from equations \eqref{eq:2} and \eqref{eq:3},
+\begin{align}
+\Pr\brak{X = 2}&=\frac{16}{2704}  \\
+&=\textbf{.005917}
+\end{align}
+\end{frame}
+\begin{frame}
+again,
+
+from equation \eqref{eq:1},probability of getting 1 ace,
+\begin{align}
+\Pr\brak{X = 1} = \frac{n\brak{X = 1}}{\sum_{i=0}^2 n\brak{X = i}}
+\end{align}
+
+putting values from equations \eqref{eq:2} and \eqref{eq:4},
+\begin{align}
+\Pr\brak{X = 1}&=\frac{384}{2704}  \\
+&=\textbf{.142}
+\end{align}
+\end{frame}
+\begin{frame}
+again,
+
+from equation \eqref{eq:1},probability of getting 0 ace,
+\begin{align}
+\Pr\brak{X = 0} = \frac{n\brak{X = 0}}{\sum_{i=0}^2 n\brak{X = i}}
+\end{align}
+
+putting values from equations \eqref{eq:2} and \eqref{eq:5},
+\begin{align}
+\Pr\brak{X = 0}&=\frac{2304}{2704}  \\
+&=\textbf{.852}
+\end{align}
+\end{frame}
+\begin{frame}
+	\begin{table}[ht!]
+		\input{./tables/table-2.tex}
+		\centering
+		\vspace{5pt}
+		\caption{probability distribution table}
+	\end{table}
+	\end{frame}
+\end{document}
